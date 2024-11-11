@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Focus Mode",
+  "version": "1.0",
+  "description": "Hides recommended videos, homepage content, and shorts on YouTube to help reduce distractions.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
